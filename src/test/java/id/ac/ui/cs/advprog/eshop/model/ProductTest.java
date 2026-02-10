@@ -27,4 +27,19 @@ class ProductTest{
     void testGetProductQuantity() {
         assertEquals(100, this.product.getProductQuantity());
     }
+
+    @Test
+    void testGetProductIdNegative() {
+        assertNotEquals("1233", this.product.getProductId());
+    }
+
+    @Test
+    void testGetProductNameNegative() {
+        assertNotEquals("Sampo cap Bukan Bambang", this.product.getProductName());
+    }
+
+    @Test
+    void testGetProductQuantityNegative() {
+        assertNotEquals(0, this.product.getProductQuantity());
+    }
 }
