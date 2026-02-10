@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import java.util.UUID;
+import java.util.NoSuchElementException;
 
 @Repository
 public class ProductRepository {
@@ -36,7 +37,7 @@ public class ProductRepository {
                 return updatedProduct;
             }
         }
-        return null; // Atau lempar exception jika produk tidak ketemu
+        throw new NoSuchElementException("Product ID " + updatedProduct.getProductId() + " not found");
     }
 
     public Iterator<Product> findAll() {
