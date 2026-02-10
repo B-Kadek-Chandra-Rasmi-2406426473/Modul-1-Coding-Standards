@@ -40,6 +40,8 @@ public class ProductRepository {
             }
         }
         throw new NoSuchElementException("Product ID " + updatedProduct.getProductId() + " not found");
+    }
+
     public void delete(String id) {
         boolean wasRemoved = productData.removeIf(p -> p.getProductId().equals(id));
         if (!wasRemoved) {
