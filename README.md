@@ -8,7 +8,7 @@ NPM : 2406426473
 ### Implementasi Clean Code Principles
 - Meaningful Names: menggunakan nama variabel dan fungsi yang deskriptif sesuai tujuannya, seperti class name `ProductController`, `ProductRepository`, lalu penamaan vaiable seperti `productId`, `productName`, dan lainnya. Hal ini membuat kode mudah dibaca tanpa perlu banyak komentar tambahan.
 - Single Responsibility Principle (SRP): memisahkan tanggung jawab dengan jelas, seperti `ProductController` hanya menangani request HTTP, `ProductService` menangani logika bisnis, dan `ProductRepository` menangani manipulasi data.
-- Lombok: Penggunaan Lombok pada model Product membantu mengurangi boilerplate code (seperti getter/setter yang panjang), sehingga kelas model terlihat lebih bersih dan fokus pada data.
+- Lombok: Penggunaan Lombok pada model Product membantu mengurangi bagian seperti getter/setter yang panjang, sehingga kelas model terlihat lebih bersih dan fokus pada data.
 - Pada fitur Edit dan Delete, saya mengubah logika dari mengembalikan null menjadi melempar `NoSuchElementException`. Ini memastikan error terdeteksi lebih cepat dan tidak menyebabkan bug tersembunyi.
 
 ### Secure Coding
